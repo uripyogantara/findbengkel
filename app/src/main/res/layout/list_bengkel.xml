@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:weightSum="1">
+    <RelativeLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        >
+        <ImageView
+            android:id="@+id/imageBengkel"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/bengkel_1"
+            android:layout_marginRight="15dp"/>
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/namaBengkel"
+            android:textSize="18sp"
+            android:textColor="@android:color/background_dark"
+            android:fontFamily="sans-serif"
+            android:layout_toEndOf="@id/imageBengkel"/>
+
+        <LinearLayout
+            android:id="@+id/content_alamat"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/namaBengkel"
+            android:layout_alignStart="@id/namaBengkel"
+            android:layout_marginTop="3dp">
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                app:srcCompat="@drawable/location"
+                android:id="@+id/imageLocation"
+                android:layout_marginRight="5dp"/>
+            <TextView
+                android:text="TextView"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/alamatBengkel"
+                android:textColor="@android:color/darker_gray"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/content_telepon"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_alamat"
+            android:layout_alignStart="@id/content_alamat"
+            android:layout_marginTop="3dp">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                app:srcCompat="@drawable/phone"
+                android:id="@+id/imagePhone"
+                android:layout_marginRight="5dp"/>
+
+            <TextView
+                android:text="TextView"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/teleponBengkel"
+                android:textColor="@android:color/darker_gray"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:background="@android:color/darker_gray"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/layout_main"/>
+</RelativeLayout>
+
